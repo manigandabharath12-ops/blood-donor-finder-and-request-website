@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Blood | Blood Donor Finder</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script><script src="js/request.js" defer></script>
+</head>
+<body><header id="site-header"></header>
+<main class="page-main container">
+  <div class="form-shell">
+    <div class="section-heading"><span class="eyebrow">Ask your community</span><h1>Submit a blood request</h1><p>Share the details. Matching available donors in the same city may be notified by email.</p></div>
+    <div id="form-message" class="message" role="status" aria-live="polite"></div>
+    <form id="request-form" class="form-grid" novalidate>
+      <label>Patient name<input name="patientName" type="text" maxlength="100" required></label>
+      <label>Blood group<select name="bloodGroup" required><option value="">Select blood group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+      <label>Units needed<input name="unitsNeeded" type="number" min="1" max="50" value="1" required></label>
+      <label>Hospital name<input name="hospitalName" type="text" maxlength="150" required></label>
+      <label>City<input name="city" type="text" maxlength="100" required></label>
+      <label>Contact person's name<input name="contactName" type="text" maxlength="100" required></label>
+      <label>Contact phone<input name="contactPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required><small>Enter 10 digits.</small></label>
+      <label>Contact email (optional)<input name="contactEmail" type="email" maxlength="254"></label>
+      <label>Urgency<select name="urgency" required><option>Normal</option><option>Urgent</option><option>Critical</option></select></label>
+      <label>Needed by (optional)<input name="neededByDate" type="date"></label>
+      <div class="form-actions"><button class="button button-primary" type="submit">Post blood request</button><p>Your contact phone will be visible on the public request listing.</p></div>
+    </form>
+  </div>
+</main><footer id="site-footer"></footer></body></html>

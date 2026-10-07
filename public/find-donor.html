@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Donor | Blood Donor Finder</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script><script src="js/find.js" defer></script>
+</head>
+<body><header id="site-header"></header>
+<main class="page-main container">
+  <div class="section-heading"><span class="eyebrow">Find help nearby</span><h1>Find a blood donor</h1><p>Search available donors by blood group and city. Donor email addresses are kept private.</p></div>
+  <form id="search-form" class="filter-bar">
+    <label>Blood group<select name="bloodGroup"><option value="">All blood groups</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+    <label>City<input name="city" type="text" maxlength="100" placeholder="e.g. Pune"></label>
+    <button class="button button-primary" type="submit">Search donors</button>
+  </form>
+  <p id="results-status" class="results-status" role="status" aria-live="polite"></p>
+  <div id="donor-results" class="card-grid"></div>
+</main><footer id="site-footer"></footer></body></html>

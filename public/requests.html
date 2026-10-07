@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Blood Requests | Blood Donor Finder</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script><script src="js/requests.js" defer></script>
+</head>
+<body><header id="site-header"></header>
+<main class="page-main container">
+  <div class="section-heading"><span class="eyebrow">Help someone today</span><h1>Open blood requests</h1><p>Requests marked Critical and Urgent are shown first.</p></div>
+  <form id="request-filter" class="filter-bar">
+    <label>Blood group<select name="bloodGroup"><option value="">All blood groups</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+    <label>City<input name="city" type="text" maxlength="100" placeholder="Any city"></label>
+    <label>Urgency<select name="urgency"><option value="">All urgency levels</option><option>Critical</option><option>Urgent</option><option>Normal</option></select></label>
+    <button class="button button-primary" type="submit">Filter requests</button>
+  </form>
+  <p id="requests-status" class="results-status" role="status" aria-live="polite"></p>
+  <div id="request-results" class="card-grid"></div>
+</main><footer id="site-footer"></footer></body></html>

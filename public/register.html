@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register as a Donor | Blood Donor Finder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script><script src="js/register.js" defer></script>
+</head>
+<body><header id="site-header"></header>
+<main class="page-main container">
+  <div class="form-shell">
+    <div class="section-heading"><span class="eyebrow">Join the community</span><h1>Become a blood donor</h1><p>Share your details so people nearby can find help when they need it.</p></div>
+    <div id="form-message" class="message" role="status" aria-live="polite"></div>
+    <form id="register-form" class="form-grid" novalidate>
+      <label>Full name<input name="name" type="text" maxlength="100" autocomplete="name" required></label>
+      <label>Age<input name="age" type="number" min="18" max="65" required></label>
+      <label>Gender<select name="gender" required><option value="">Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+      <label>Email address<input name="email" type="email" maxlength="254" autocomplete="email" required></label>
+      <label>Phone number<input name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" required><small>Enter 10 digits, without spaces or country code.</small></label>
+      <label>Blood group<select name="bloodGroup" required><option value="">Select blood group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+      <label>City<input name="city" type="text" maxlength="100" autocomplete="address-level2" required></label>
+      <label>State (optional)<input name="state" type="text" maxlength="100" autocomplete="address-level1"></label>
+      <label>Password<input name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required><small>At least 8 characters.</small></label>
+      <label>Confirm password<input name="confirmPassword" type="password" minlength="8" maxlength="128" autocomplete="new-password" required></label>
+      <div class="form-actions"><button class="button button-primary" type="submit">Create donor account</button><p>Already registered? <a href="login.html">Log in</a></p></div>
+    </form>
+  </div>
+</main><footer id="site-footer"></footer></body></html>

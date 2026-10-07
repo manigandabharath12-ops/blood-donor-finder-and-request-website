@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donor Dashboard | Blood Donor Finder</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script><script src="js/dashboard.js" defer></script>
+</head>
+<body><header id="site-header"></header>
+<main class="page-main container">
+  <div class="dashboard-heading"><div class="section-heading"><span class="eyebrow">Your donor account</span><h1>Donor dashboard</h1><p>Keep your information current so people can reach you.</p></div><button id="logout-button" class="button button-secondary" type="button">Log out</button></div>
+  <div id="dashboard-message" class="message" role="status" aria-live="polite"></div>
+  <section class="profile-card">
+    <div><span class="eyebrow">Availability</span><h2 id="donor-name">Loading profile…</h2><p id="donor-summary"></p></div>
+    <label class="toggle-label" for="availability-toggle"><span id="availability-text">Available to donate</span><input id="availability-toggle" type="checkbox" aria-label="Toggle donor availability"><span class="toggle" aria-hidden="true"></span></label>
+  </section>
+  <section class="form-shell dashboard-form">
+    <h2>Edit your profile</h2>
+    <form id="profile-form" class="form-grid" novalidate>
+      <label>Full name<input name="name" type="text" maxlength="100" required></label>
+      <label>Age<input name="age" type="number" min="18" max="65" required></label>
+      <label>Gender<select name="gender" required><option>Female</option><option>Male</option><option>Other</option></select></label>
+      <label>Phone number<input name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required></label>
+      <label>Blood group<select name="bloodGroup" required><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+      <label>City<input name="city" type="text" maxlength="100" required></label>
+      <label>State<input name="state" type="text" maxlength="100"></label>
+      <label>Last donation date (optional)<input name="lastDonationDate" type="date"></label>
+      <div class="form-actions"><button class="button button-primary" type="submit">Save profile</button></div>
+    </form>
+  </section>
+</main><footer id="site-footer"></footer></body></html>
