@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Blood Donor Finder",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
